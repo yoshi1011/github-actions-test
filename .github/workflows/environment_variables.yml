@@ -1,14 +1,14 @@
-# name: Environment variables
-# on: push
-# jobs:
-#   run:
-#     runs-on: ubuntu-latest
-#     env:
-#       BRANCH: main
-#       USERNAME: ${{vars.USERNAME}}
-#     steps:
-#       - run: echo "${BRANCH}"
-#       - uses: actions/checkout@v4
-#         with:
-#           ref: ${{env.BRANCH}}
-#       - run: echo "username is ${USERNAME}"
+name: Environment variables
+on: push
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      BRANCH: main
+      USERNAME: ${{vars.USERNAME}}
+    steps:
+      - run: echo "${BRANCH}"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{env.BRANCH}}
+      - run: echo "username is ${USERNAME}"
