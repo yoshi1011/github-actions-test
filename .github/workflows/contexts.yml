@@ -4,4 +4,6 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "GitHub Actor is ${{github.actor}}"
+      - run: |
+          echo "GitHub Actor is ${{github.actor}}"
+          echo "runner is ${{runner.name}}"
